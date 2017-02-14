@@ -12,6 +12,7 @@
 		007D978E1E52DB3A00244D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007D978C1E52DB3A00244D94 /* Main.storyboard */; };
 		007D97901E52DB3A00244D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007D978F1E52DB3A00244D94 /* Assets.xcassets */; };
 		007D97931E52DB3A00244D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007D97911E52DB3A00244D94 /* LaunchScreen.storyboard */; };
+		007D979E1E52F62800244D94 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 007D979D1E52F62800244D94 /* Math.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		007D978F1E52DB3A00244D94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		007D97921E52DB3A00244D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		007D97941E52DB3A00244D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		007D979B1E52F62800244D94 /* CoreGraphic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreGraphic-Bridging-Header.h"; sourceTree = "<group>"; };
+		007D979C1E52F62800244D94 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		007D979D1E52F62800244D94 /* Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,9 @@
 				007D978F1E52DB3A00244D94 /* Assets.xcassets */,
 				007D97911E52DB3A00244D94 /* LaunchScreen.storyboard */,
 				007D97941E52DB3A00244D94 /* Info.plist */,
+				007D979C1E52F62800244D94 /* Math.h */,
+				007D979D1E52F62800244D94 /* Math.m */,
+				007D979B1E52F62800244D94 /* CoreGraphic-Bridging-Header.h */,
 			);
 			path = CoreGraphic;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 					007D97841E52DB3A00244D94 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = P68334AC4C;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				007D978B1E52DB3A00244D94 /* ViewController.swift in Sources */,
+				007D979E1E52F62800244D94 /* Math.m in Sources */,
 				007D97891E52DB3A00244D94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,11 +268,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P68334AC4C;
 				INFOPLIST_FILE = CoreGraphic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yate.CoreGraphic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreGraphic/CoreGraphic-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,11 +284,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P68334AC4C;
 				INFOPLIST_FILE = CoreGraphic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yate.CoreGraphic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreGraphic/CoreGraphic-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -300,6 +314,7 @@
 				007D97991E52DB3A00244D94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
